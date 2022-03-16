@@ -11,7 +11,7 @@ interface FoodProps {
   handleDelete: (id: number) => void;
 }
 
-const FoodRC = ({
+const FoodCard = ({
   food,
   handleEditFood,
   handleDelete,
@@ -68,7 +68,7 @@ const FoodRC = ({
               id={`available-switch-${food.id}`}
               type="checkbox"
               checked={isAvailable}
-              onChange={() => toggleAvailable}
+              onChange={() => toggleAvailable()}
               data-testid={`change-status-food-${food.id}`}
             />
             <span className="slider" />
@@ -79,4 +79,4 @@ const FoodRC = ({
   );
 };
 
-export default FoodRC;
+export default FoodCard;
